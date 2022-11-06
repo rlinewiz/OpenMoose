@@ -1,0 +1,13 @@
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\bin\Release\OpenMoose.exe.config
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\bin\Release\OpenMoose.exe
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\bin\Release\OpenMoose.pdb
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\bin\Release\J2534.dll
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\ME7 Suite.csproj.AssemblyReference.cache
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\ME7 Suite.csproj.SuggestedBindingRedirects.cache
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\J2534.frmMain.resources
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\J2534.Properties.Resources.resources
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\ME7 Suite.csproj.GenerateResource.cache
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\ME7 Suite.csproj.CoreCompileInputs.cache
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\ME7 Suite.csproj.CopyComplete
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\OpenMoose.exe
+J:\Tuning\Tools\utilites\openmoose-nov6-fix\obj\Release\OpenMoose.pdb

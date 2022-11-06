@@ -1,0 +1,20 @@
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\bin\Debug\ECM-TECH Suite.exe
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\bin\Debug\ECM-TECH Suite.pdb
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\bin\Debug\J2534.dll
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\ME7 Suite.csprojResolveAssemblyReference.cache
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\J2534.frmECMTECH.resources
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\J2534.Properties.Resources.resources
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\ME7 Suite.csproj.GenerateResource.Cache
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\ECM-TECH Suite.exe
+D:\Dicedotnet\DiCEdotNET\me7_suite_with_form\ME7 Suite\obj\Debug\ECM-TECH Suite.pdb
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\ME7 Suite.csproj.AssemblyReference.cache
+C:\Users\Steve\Desktop\volvo tuning\me7suite\bin\Debug\J2534.dll
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\J2534.Properties.Resources.resources
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\ME7 Suite.csproj.GenerateResource.cache
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\ME7 Suite.csproj.CoreCompileInputs.cache
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\ME7 Suite.csproj.CopyComplete
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\J2534.frmMain.resources
+C:\Users\Steve\Desktop\volvo tuning\me7suite\bin\Debug\OpenMoose.exe
+C:\Users\Steve\Desktop\volvo tuning\me7suite\bin\Debug\OpenMoose.pdb
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\OpenMoose.exe
+C:\Users\Steve\Desktop\volvo tuning\me7suite\obj\Debug\OpenMoose.pdb
