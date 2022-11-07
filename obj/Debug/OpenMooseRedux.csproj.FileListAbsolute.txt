@@ -1,0 +1,11 @@
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\bin\Debug\OpenMoose.exe.config
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\bin\Debug\OpenMoose.exe
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\bin\Debug\OpenMoose.pdb
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\bin\Debug\J2534.dll
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMooseRedux.csproj.AssemblyReference.cache
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\J2534.frmMain.resources
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMooseRedux.csproj.GenerateResource.cache
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMooseRedux.csproj.CoreCompileInputs.cache
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMooseRedux.csproj.CopyComplete
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMoose.exe
+C:\Users\Steve\Source\Repos\rlinewiz\OpenMoose\obj\Debug\OpenMoose.pdb
