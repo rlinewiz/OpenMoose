@@ -88,6 +88,12 @@ namespace J2534
     private Button but_chooseparams;
     private System.Windows.Forms.Timer logTimer;
         private Label label2;
+        private Label label4;
+        private TabPage tabPage3;
+        private Label label7;
+        private TabPage tabPage4;
+        private Label label8;
+        private Label label9;
         private ToolStripMenuItem aboutToolStripMenuItem;
 
     public frmMain()
@@ -182,7 +188,7 @@ namespace J2534
         {
           int num2 = (int) MessageBox.Show("Please choose a BIN file.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
-        else if (MessageBox.Show("Is the key in pos II with the engine NOT running?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+        else if (MessageBox.Show("Key MUST be in POS II with the engine NOT running. Are you ready?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
         {
           this.txtBin.Text = "";
         }
@@ -193,7 +199,7 @@ namespace J2534
           int length = this.binFile.Length;
           if (this.binFile[length - 1] != (byte) 131 || this.binFile[length - 2] != (byte) 131)
           {
-            int num3 = (int) MessageBox.Show("This file is corrupt. Please contact the distributor.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            int num3 = (int) MessageBox.Show("This is not a valid BIN file for this platform.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
             this.changeButtonState(true);
             this.txtBin.Text = "";
           }
@@ -227,7 +233,12 @@ namespace J2534
 
     private void Form1_Load(object sender, EventArgs e)
     {
-      this.updateDevices();
+            var resources = new System.Resources.ResourceManager(typeof(frmMain));
+            var image = (Bitmap)resources.GetObject("moosepic");
+            tabPage1.BackgroundImage = image;
+
+
+            this.updateDevices();
       this.regedit = new Utility.ModifyRegistry.ModifyRegistry();
       this.txtParamsFile.Text = this.getECUParams();
       try
@@ -935,6 +946,7 @@ namespace J2534
     private void InitializeComponent()
     {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.flashTimer = new System.Windows.Forms.Timer(this.components);
             this.but_connectdice = new System.Windows.Forms.Button();
             this.comboBox_J2534_devices = new System.Windows.Forms.ComboBox();
@@ -946,6 +958,7 @@ namespace J2534
             this.readTimer = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.progressFlash = new System.Windows.Forms.ProgressBar();
             this.cmdRead = new System.Windows.Forms.Button();
@@ -975,13 +988,20 @@ namespace J2534
             this.txtParamsFile = new System.Windows.Forms.TextBox();
             this.txtLogFile = new System.Windows.Forms.TextBox();
             this.but_chooseparams = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.logTimer = new System.Windows.Forms.Timer(this.components);
             this.cmdDetectDevices = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuMain.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flashTimer
@@ -1057,8 +1077,10 @@ namespace J2534
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 39);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tabControl1.Name = "tabControl1";
@@ -1068,6 +1090,7 @@ namespace J2534
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.progressFlash);
             this.tabPage1.Controls.Add(this.cmdRead);
@@ -1075,15 +1098,26 @@ namespace J2534
             this.tabPage1.Controls.Add(this.cmdReset);
             this.tabPage1.Controls.Add(this.txtBin);
             this.tabPage1.Controls.Add(this.lblTime);
-            this.tabPage1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 316);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 311);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Flashing";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label4.Location = new System.Drawing.Point(5, 172);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(554, 135);
+            this.label4.TabIndex = 18;
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // label2
             // 
@@ -1148,7 +1182,7 @@ namespace J2534
             this.txtBin.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtBin.Name = "txtBin";
             this.txtBin.ReadOnly = true;
-            this.txtBin.Size = new System.Drawing.Size(774, 20);
+            this.txtBin.Size = new System.Drawing.Size(774, 21);
             this.txtBin.TabIndex = 6;
             // 
             // lblTime
@@ -1175,11 +1209,12 @@ namespace J2534
             this.tabPage2.Controls.Add(this.txtParamsFile);
             this.tabPage2.Controls.Add(this.txtLogFile);
             this.tabPage2.Controls.Add(this.but_chooseparams);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 316);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 311);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Logging";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1319,7 +1354,7 @@ namespace J2534
             this.comboBox_xmlparams.Location = new System.Drawing.Point(11, 9);
             this.comboBox_xmlparams.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.comboBox_xmlparams.Name = "comboBox_xmlparams";
-            this.comboBox_xmlparams.Size = new System.Drawing.Size(346, 21);
+            this.comboBox_xmlparams.Size = new System.Drawing.Size(346, 23);
             this.comboBox_xmlparams.TabIndex = 49;
             this.comboBox_xmlparams.SelectedIndexChanged += new System.EventHandler(this.comboBox_xmlparams_SelectedIndexChanged);
             // 
@@ -1386,7 +1421,7 @@ namespace J2534
             this.txtParamsFile.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtParamsFile.Name = "txtParamsFile";
             this.txtParamsFile.ReadOnly = true;
-            this.txtParamsFile.Size = new System.Drawing.Size(408, 20);
+            this.txtParamsFile.Size = new System.Drawing.Size(408, 21);
             this.txtParamsFile.TabIndex = 43;
             // 
             // txtLogFile
@@ -1395,7 +1430,7 @@ namespace J2534
             this.txtLogFile.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtLogFile.Name = "txtLogFile";
             this.txtLogFile.ReadOnly = true;
-            this.txtLogFile.Size = new System.Drawing.Size(408, 20);
+            this.txtLogFile.Size = new System.Drawing.Size(408, 21);
             this.txtLogFile.TabIndex = 42;
             // 
             // but_chooseparams
@@ -1408,6 +1443,44 @@ namespace J2534
             this.but_chooseparams.Text = "Load Params";
             this.but_chooseparams.UseVisualStyleBackColor = true;
             this.but_chooseparams.Click += new System.EventHandler(this.but_chooseparams_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1003, 311);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "CEM";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(366, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(231, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "CEM tools are in development";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1003, 311);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Tools";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(237, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(528, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Tools for BIN manipulation on common variants currently being tested";
             // 
             // logTimer
             // 
@@ -1426,23 +1499,38 @@ namespace J2534
             this.cmdDetectDevices.UseVisualStyleBackColor = true;
             this.cmdDetectDevices.Click += new System.EventHandler(this.cmdDetectDevices_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(615, 6);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(392, 12);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "This application is in development. Features may come and go without notice.";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1011, 381);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.but_connectdice);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.comboBox_J2534_devices);
             this.Controls.Add(this.cmdDetectDevices);
             this.Controls.Add(this.menuMain);
             this.Font = new System.Drawing.Font("MS Outlook", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuMain;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Open Moose";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "OpenMoose REDUX";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuMain.ResumeLayout(false);
@@ -1454,6 +1542,10 @@ namespace J2534
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
