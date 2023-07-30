@@ -4,7 +4,7 @@ THIS VERSION IS OLD AND BUGGY. YOU CAN USE IT TO READ AND WRITE YOUR BIN, NOTHIN
 
 THIS ONLY EXISTS AS A JUMPING OFF POINT. TAKE THE CODE AND MAKE YOUR OWN APP. LEARN HOW IT ALL WORKS.
 
-Flashing doesn't work and non-P2 vehicle support is questionable
+Logging doesn't work and non-P2 vehicle support is questionable
 
 Verify your checksum with external checksum tools, just in case
 
